@@ -1,105 +1,254 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Neil Mahajan's Portfolio - Project: Word Scramble</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Neil Mahajan's Portfolio - Project: Word Scramble</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "596131846119776");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=596131846119776&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1>Project: Word Scramble</h1>
+        <p>Created by Neil Mahajan</p>
+      </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+        <!-- Content -->
+        <section id="content" class="main">
+          <h2>Introduction</h2>
+          <p>
+            I chose to create a miniature word guessing game for my honor's
+            project named Word Scramble. The game has one player who must guess
+            a word from the scrambled version of that word. My motivation for
+            creating this game was to create something useful and interesting to
+            me. By creating a game that sparks the player to think and
+            contemplate a guess, it invites the player to get involved with the
+            game and through the variety of words and genres, continue playing.
+            Additionally, this game is a short-time-killer type of game, which
+            means anyone could get an understanding of how to play very quickly
+            and begin playing. The creation of Word Scramble also requires me to
+            implement the concepts of object-oriented programming, sorting, GUI
+            development, and game creation.
+          </p>
+          <h2>Requirements</h2>
+          <p>
+            The requirements for this Word Scramble game will be to provide an
+            application and interface where the player can play the game in the
+            most efficient, practical, simple, and enjoyable format. Therefore,
+            the game will only contain the necessary elements but will provide
+            an eye-pleasing display with separated and easy-to-read elements.
+            The interface of the game will also be straightforward with the
+            buttons' intentions labeled clearly and removing any confusion a
+            player would have while playing.
+          </p>
+          <h2>Approach</h2>
+          <p>
+            My approach was to scratch up the basic details of the project
+            including the use case, actors, and steps of execution. I also
+            created a basic sketch of what the game could look like so that I
+            have a basic reference point for creating the game. After figuring
+            out what objects I would create, I created a UML diagram and
+            included the relationships between the objects while creating the
+            instance variables and methods for each object.
+          </p>
+          <h2>Steps of Execution</h2>
+          <p>
+            1. The user chooses a word bank<br />
+            2. A random word is chosen from the selected word bank<br />
+            3. The current word bank text is updated<br />
+            4. The original word is scrambled<br />
+            5. The scrambled word is shown on the screen<br />
+            6. When the player presses the hint button, a random letter from the
+            word is shown in the correct position and the score is decreased<br />
+            7. The player attempts to guess the word<br />
+            8. The number of guesses count is increased and displayed<br />
+            9. The player submits and the answer is compared to the unscrambled
+            word checking to see if they are the same<br />
+            10. If they are the same, a congratulations message is displayed,
+            the number of words guessed count and number of guesses count is set
+            to zero, the score increases, and the player chooses a new word from
+            a word bank<br />
+            11. If they are not the same, an incorrect guess message is
+            displayed, the number of guesses counts increases, the score
+            decreases, and the player can choose a new word or guess again<br />
+            12. When the player chooses a word bank from the drop-down and
+            clicks the new word button, it checks to see if the previous word
+            was guessed or not<br />
+            13. If it was not guessed, then the number of words not guessed
+            count increases, and the score decreases<br />
+            14. A new word is chosen from the selected word bank, and the
+            instruction message is displayed, the current word bank text is
+            updated, and the word object is set to play again
+          </p>
+          <h2>Design (UML Diagram)</h2>
+          <span class="image"
+            ><img
+              src="images/WordScrambleUML.png"
+              width="1000"
+              height="1123"
+              alt=""
+          /></span>
+          <h2>Simulation</h2>
+          <p>Game Start</p>
+          <span class="image"><img src="images/WSPicture1.png" alt="" /></span>
+          <p>
+            Incorrect Guess: provides incorrect guess message, decreases score,
+            increases the number of guesses count, and displays the word in
+            previous guesses
+          </p>
+          <span class="image"><img src="images/WSPicture2.png" alt="" /></span>
+          <p>
+            The player presses the hint button: a randomly selected letter in
+            the word is revealed in the correct order under revealed letters and
+            the score is decreased
+          </p>
+          <span class="image"><img src="images/WSPicture3.png" alt="" /></span>
+          <p>
+            The player guesses the word correctly: the congratulations message
+            shows, the number of words guessed count increases, the score
+            increases, the correct word is displayed, and the input text box is
+            cleared and set to not editable
+          </p>
+          <span class="image"><img src="images/WSPicture4.png" alt="" /></span>
+          <p>
+            The Player chooses a new word after selecting a word bank: the
+            number of words not guessed is updated increased and the score is
+            decreased if the word was not guessed, and a new word from the
+            selected word bank is provided and scrambled to display to the
+            player
+          </p>
+          <span class="image"><img src="images/WSPicture5.png" alt="" /></span>
+          <h2>Conclusion</h2>
+          <p>
+            When creating this project, I faced a few problems that included
+            figuring out how the border pane worked in JavaFX along with how to
+            make the application well presented and organized. By overcoming
+            these problems and creating a java project from scratch, I gained a
+            greater understanding of java object-oriented programming. I think
+            the greatest task that helped me with this project was contemplating
+            and designing the objects and their relations using a
+            step-of-execution list and a UML diagram indicating the
+            relationships between the objects. From that point on, I coded the
+            project without changing my basic design too much other than
+            optimizing and eliminating some unnecessary objects and variables
+            while adding one or two that allowed me to complete my vision for
+            the game. Some possible improvements that could be made in the
+            future include adding more color to the game to draw the player’s
+            eyes to a certain message or area. This color would aid in the
+            visual appeal of the game and would increase the player’s interest
+            in the game. I could also improve the complexity of the game, by
+            adding more word banks and additional settings in a separate pane
+            screen to access and control features such as difficulty or score.
+          </p>
+        </section>
+      </div>
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Project: Word Scramble</h1>
-						<p>Created by Neil Mahajan</p>
-					</header>
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <h2>Contact Information</h2>
+          <dl class="alt">
+            <dt>Email</dt>
+            <dd>
+              <a href="mailto: neilsmahajan@gmail.com"
+                >neilsmahajan@gmail.com</a
+              >
+            </dd>
+          </dl>
+          <ul class="icons">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/neil-mahajan-1bb8741a8/"
+                class="icon brands fa-linkedin alt"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/Neilsmahajan"
+                class="icon brands fa-github alt"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>GitHub Code</h2>
+          <p>
+            I have published this code on my GitHub profile which you can access
+            here:
+          </p>
+          <ul class="actions">
+            <li>
+              <a
+                href="https://github.com/Neilsmahajan/WordScramble"
+                class="button"
+                >Word Scramble Code</a
+              >
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </div>
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Content -->
-							<section id="content" class="main">
-								<h2>Introduction</h2>
-								<p>I chose to create a miniature word guessing game for my honor's project named Word Scramble. The game has one player who must guess a word from the scrambled version of that word. My motivation for creating this game was to create something useful and interesting to me. By creating a game that sparks the player to think and contemplate a guess, it invites the player to get involved with the game and through the variety of words and genres, continue playing. Additionally, this game is a short-time-killer type of game, which means anyone could get an understanding of how to play very quickly and begin playing. The creation of Word Scramble also requires me to implement the concepts of object-oriented programming, sorting, GUI development, and game creation.</p>
-								<h2>Requirements</h2>
-								<p>The requirements for this Word Scramble game will be to provide an application and interface where the player can play the game in the most efficient, practical, simple, and enjoyable format. Therefore, the game will only contain the necessary elements but will provide an eye-pleasing display with separated and easy-to-read elements. The interface of the game will also be straightforward with the buttons' intentions labeled clearly and removing any confusion a player would have while playing.</p>
-								<h2>Approach</h2>
-								<p>My approach was to scratch up the basic details of the project including the use case, actors, and steps of execution. I also created a basic sketch of what the game could look like so that I have a basic reference point for creating the game. After figuring out what objects I would create, I created a UML diagram and included the relationships between the objects while creating the instance variables and methods for each object.</p>
-								<h2>Steps of Execution</h2>
-								<p>	1.	The user chooses a word bank<br>
-									2.	A random word is chosen from the selected word bank<br>
-									3.	The current word bank text is updated<br>
-									4.	The original word is scrambled<br>
-									5.	The scrambled word is shown on the screen<br>
-									6.	When the player presses the hint button, a random letter from the word is shown in the correct position and the score is decreased<br>
-									7.	The player attempts to guess the word<br>
-									8.	The number of guesses count is increased and displayed<br>
-									9.	The player submits and the answer is compared to the unscrambled word checking to see if they are the same<br>
-									10.	If they are the same, a congratulations message is displayed, the number of words guessed count and number of guesses count is set to zero, the score increases, and the player chooses a new word from a word bank<br>
-									11.	If they are not the same, an incorrect guess message is displayed, the number of guesses counts increases, the score decreases, and the player can choose a new word or guess again<br>
-									12.	When the player chooses a word bank from the drop-down and clicks the new word button, it checks to see if the previous word was guessed or not<br>
-									13.	If it was not guessed, then the number of words not guessed count increases, and the score decreases<br>
-									14.	A new word is chosen from the selected word bank, and the instruction message is displayed, the current word bank text is updated, and the word object is set to play again</p>
-								<h2>Design (UML Diagram)</h2>
-								<span class="image"><img src="images/WordScrambleUML.png" width="1000" height="1123" alt="" /></span>
-								<h2>Simulation</h2>
-								<p>Game Start</p>
-								<span class="image"><img src="images/WSPicture1.png" alt="" /></span>
-								<p>Incorrect Guess: provides incorrect guess message, decreases score, increases the number of guesses count, and displays the word in previous guesses</p>
-								<span class="image"><img src="images/WSPicture2.png" alt="" /></span>
-								<p>The player presses the hint button: a randomly selected letter in the word is revealed in the correct order under revealed letters and the score is decreased</p>
-								<span class="image"><img src="images/WSPicture3.png" alt="" /></span>
-								<p>The player guesses the word correctly: the congratulations message shows, the number of words guessed count increases, the score increases, the correct word is displayed, and the input text box is cleared and set to not editable</p>
-								<span class="image"><img src="images/WSPicture4.png" alt="" /></span>
-								<p>The Player chooses a new word after selecting a word bank: the number of words not guessed is updated increased and the score is decreased if the word was not guessed, and a new word from the selected word bank is provided and scrambled to display to the player</p>
-								<span class="image"><img src="images/WSPicture5.png" alt="" /></span>
-								<h2>Conclusion</h2>
-								<p>When creating this project, I faced a few problems that included figuring out how the border pane worked in JavaFX along with how to make the application well presented and organized. By overcoming these problems and creating a java project from scratch, I gained a greater understanding of java object-oriented programming. I think the greatest task that helped me with this project was contemplating and designing the objects and their relations using a step-of-execution list and a UML diagram indicating the relationships between the objects. From that point on, I coded the project without changing my basic design too much other than optimizing and eliminating some unnecessary objects and variables while adding one or two that allowed me to complete my vision for the game. Some possible improvements that could be made in the future include adding more color to the game to draw the player’s eyes to a certain message or area. This color would aid in the visual appeal of the game and would increase the player’s interest in the game. I could also improve the complexity of the game, by adding more word banks and additional settings in a separate pane screen to access and control features such as difficulty or score.</p>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Contact Information</h2>
-							<dl class="alt">
-								<dt>Email</dt>
-								<dd><a href="mailto: neilsmahajan@gmail.com">neilsmahajan@gmail.com</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="https://www.linkedin.com/in/neil-mahajan-1bb8741a8/" class="icon brands fa-linkedin alt"><span class="label">Instagram</span></a></li>
-								<li><a href="https://github.com/Neilsmahajan" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-							</ul>
-						</section>
-						<section>
-							<h2>GitHub Code</h2>
-							<p>I have published this code on my GitHub profile which you can access here:</p>
-							<ul class="actions">
-								<li><a href="https://github.com/Neilsmahajan/WordScramble" class="button">Word Scramble Code</a></li>
-							</ul>
-						</section>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

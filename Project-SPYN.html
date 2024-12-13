@@ -1,84 +1,208 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Neil Mahajan's Portfolio - Project: SPYN</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Neil Mahajan's Portfolio - Project: SPYN</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "596131846119776");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=596131846119776&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1>Project: SPYN</h1>
+        <p>
+          A maze solving car designed by my groupmembers, Frankie Ward, Crispin
+          Knipling, Arjun Daggubati, and myself.
+        </p>
+      </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+        <!-- Content -->
+        <section id="content" class="main">
+          <span class="image main"
+            ><img src="images/RobotSolvingMazePhoto2.png" alt=""
+          /></span>
+          <h2>Description of Project</h2>
+          <p>
+            The requirements for this project were to create a car which could
+            solve the maze autonomously without user control unless it was on
+            the green and blue areas, where the user had control of the car
+            which surved the purpose of a taxi. The car picked a miniature inch
+            by inch cardbord wheelchaired man on blue and dropped off the
+            cardboard wheelchair man on the green without harming the man.
+            Additionally the car should start on yellow and stop on the red stop
+            signs indicated with red tape on the ground.
+          </p>
+          <h2>Car Design</h2>
+          <p>
+            We created the design of the car with the goals to maximize the
+            car's compactness and sturdieness while fitting all of the motors
+            and the sensors which connected to the EV3 brick. Throughout the
+            testing phase of the process, the car encountered multiple issues
+            with getting stuck at certain parts of the maze such as the corners
+            where a pertruding sensor catch the edge of the wall and move the
+            car in an incorrect direciton. Additionally, because of the way the
+            bumper sensor on the front of the car could hit the wall on its edge
+            and hault the car without even registering the press, the car could
+            get stuck even with a slight misalignement of direction. To solve
+            both of these issues, our team added small wheels with an axis
+            perpendicular to the ground on both the left and right sides not
+            only so that the car wouldn't get stuck on the corners, but also so
+            the robot's bumper sensor would always activate when heading towards
+            a wall even with a large misalignment.
+          </p>
+          <h2>Programming</h2>
+          <p>
+            Our solution to solving the maze was to have the car hug the right
+            wall until arriving at a portion requiring user control. The car
+            used the inputs from ultrasonic sensor to determine when it should
+            turn right, the bumper sensor on the front to determine when it
+            should turn left, and the color sensor to determine when it should
+            switch over to user control. We faced issues with the code through
+            inconsistancies such as the car not turning exactly ninty degrees
+            due to the way the MATLAB language funcitoned. We fixed this issue
+            through redesigning the car itself so that it would account for the
+            inperecise turnes along with changing the code so that the car would
+            not enter an infinite loop, rendering it stuck, while traversing
+            through the maze.
+          </p>
+          <h2>Video</h2>
+          <p>
+            This video shows the robot solving the maze in the testing stage of
+            development.
+          </p>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/uYGAuRvZbH8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <h2>Gnatt Chart</h2>
+          <p>Progress</p>
+          <span class="image main"
+            ><img src="images/GnattChart.png" alt=""
+          /></span>
+          <h2>Conclusion</h2>
+          <p>
+            I learned many skills through the creation of the project such as
+            debugging code and trouble shooting issues along with designing a
+            robot. Beyond those skills, I gained experience in many soft skills
+            such as teamwork and communication. Although our team faced many
+            issues during the development stage requiring us to redesign the car
+            after it accidentally fell from a table, we were able to
+            successfully create an autonomous car that can solve a maze.
+          </p>
+        </section>
+      </div>
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Project: SPYN</h1>
-						<p>A maze solving car designed by my groupmembers, Frankie Ward, Crispin Knipling, Arjun Daggubati, and myself.</p>
-					</header>
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <h2>Contact Information</h2>
+          <dl class="alt">
+            <dt>Email</dt>
+            <dd>
+              <a href="mailto: neilsmahajan@gmail.com"
+                >neilsmahajan@gmail.com</a
+              >
+            </dd>
+          </dl>
+          <ul class="icons">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/neil-mahajan-1bb8741a8/"
+                class="icon brands fa-linkedin alt"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/Neilsmahajan"
+                class="icon brands fa-github alt"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>GitHub Code</h2>
+          <p>
+            I have published this code on my GitHub profile which you can access
+            here:
+          </p>
+          <ul class="actions">
+            <li>
+              <a
+                href="https://github.com/Neilsmahajan/WordScramble"
+                class="button"
+                >Project: SPYN Code</a
+              >
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </div>
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Content -->
-							<section id="content" class="main">
-								<span class="image main"><img src="images/RobotSolvingMazePhoto2.png" alt="" /></span>
-								<h2>Description of Project </h2>
-								<p>The requirements for this project were to create a car which could solve the maze autonomously without user control unless it was on the green and blue areas, where the user had control of the car which surved the purpose of a taxi. The car picked a miniature inch by inch cardbord wheelchaired man on blue and dropped off the cardboard wheelchair man on the green without harming the man. Additionally the car should start on yellow and stop on the red stop signs indicated with red tape on the ground.</p>
-								<h2>Car Design</h2>
-								<p>We created the design of the car with the goals to maximize the car's compactness and sturdieness while fitting all of the motors and the sensors which connected to the EV3 brick. Throughout the testing phase of the process, the car encountered multiple issues with getting stuck at certain parts of the maze such as the corners where a pertruding sensor catch the edge of the wall and move the car in an incorrect direciton. Additionally, because of the way the bumper sensor on the front of the car could hit the wall on its edge and hault the car without even registering the press, the car could get stuck even with a slight misalignement of direction. To solve both of these issues, our team added small wheels with an axis perpendicular to the ground on both the left and right sides not only so that the car wouldn't get stuck on the corners, but also so the robot's bumper sensor would always activate when heading towards a wall even with a large misalignment.</p>
-								<h2>Programming</h2>
-								<p>Our solution to solving the maze was to have the car hug the right wall until arriving at a portion requiring user control. The car used the inputs from ultrasonic sensor to determine when it should turn right, the bumper sensor on the front to determine when it should turn left, and the color sensor to determine when it should switch over to user control. We faced issues with the code through inconsistancies such as the car not turning exactly ninty degrees due to the way the MATLAB language funcitoned. We fixed this issue through redesigning the car itself so that it would account for the inperecise turnes along with changing the code so that the car would not enter an infinite loop, rendering it stuck, while traversing through the maze.</p>
-								<h2>Video</h2>
-								<p>This video shows the robot solving the maze in the testing stage of development.</p>
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/uYGAuRvZbH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								<h2>Gnatt Chart</h2>
-								<p>Progress </p>
-								<span class="image main"><img src="images/GnattChart.png" alt="" /></span>
-								<h2>Conclusion</h2>
-								<p>I learned many skills through the creation of the project such as debugging code and trouble shooting issues along with designing a robot. Beyond those skills, I gained experience in many soft skills such as teamwork and communication. Although our team faced many issues during the development stage requiring us to redesign the car after it accidentally fell from a table, we were able to successfully create an autonomous car that can solve a maze.</p>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Contact Information</h2>
-							<dl class="alt">
-								<dt>Email</dt>
-								<dd><a href="mailto: neilsmahajan@gmail.com">neilsmahajan@gmail.com</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="https://www.linkedin.com/in/neil-mahajan-1bb8741a8/" class="icon brands fa-linkedin alt"><span class="label">Instagram</span></a></li>
-								<li><a href="https://github.com/Neilsmahajan" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-							</ul>
-						</section>
-						<section>
-							<h2>GitHub Code</h2>
-							<p>I have published this code on my GitHub profile which you can access here:</p>
-							<ul class="actions">
-								<li><a href="https://github.com/Neilsmahajan/WordScramble" class="button">Project: SPYN Code</a></li>
-							</ul>
-						</section>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
